@@ -1,0 +1,5 @@
+# m h dom mon dow command
+# Run homepass every 2 minutes
+*/2 *  *   *   *  /usr/bin/homepass 2>&1 >> /tmp/homepass.log
+# Clean log file every 8 hours
+ 0 */8 *   *   *  echo "$(date): Log truncated." > /tmp/homepass.log
