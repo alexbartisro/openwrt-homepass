@@ -1,17 +1,22 @@
 #!/bin/sh
-# HomePass
+# HomePass for OpenWRT. Forked from https://gist.github.com/masterdje/7031189
+# Updated in Dec. 2016 by trusk89 https://github.com/trusk89/openwrt-homepass
 # To be called by cron every few minutes
 
 # /etc/homepass.list must contain at least one line with a MAC.
 # Optionally, you can specify a SSID after any MAC separating it with a tab.
 
-DEFAULT_SSID="NZ@McD1"
+# FYI - as of September 2016 and the 11.1 firmware update, it is being reported that "NZ@McD1" 
+# no longer works as a Homepass Relay.
+
+
+DEFAULT_SSID="attwifi"
 
 DATE=$(date)
 
 # The WiFi network number we need to toggle the MAC address of
 # This will use the first wifi in access point mode (ap)
-WIFI=$(uci show wireless | grep "mode=ap" | awk 'NR>1{print $1}' RS=[ FS=] | head -n 1)
+WIFI=$(uci show wireless | grep "mode='ap'" | awk 'NR>1{print $1}' RS=[ FS=] | head -n 1)
 
 if [ ! -s /etc/homepass.list ]; then
   echo "MAC address list is missing or zero in length."
