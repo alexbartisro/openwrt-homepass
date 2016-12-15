@@ -1,6 +1,8 @@
-# openwrt-homepass
-# HomePass for OpenWRT. Forked from https://github.com/Nephiel/openwrt-homepass
-# Updated in Dec. 2016 by trusk89 https://github.com/trusk89/openwrt-homepass
+# Notice: a open network with just MAC filtering is an insecurity. Use at your own risk.
+
+## openwrt-homepass
+## HomePass for OpenWRT. Forked from https://github.com/Nephiel/openwrt-homepass
+## Updated in Dec. 2016 by trusk89 https://github.com/trusk89/openwrt-homepass
 
 Now allows to specify a SSID for each MAC.
 
@@ -13,3 +15,6 @@ Feel free to open PRs with more MACs.
 
 I have tested it with OpenWRT 15.05 on a Dlink Dir-600 B2 and it works perfectly. If needed or requested, 
 I will probably do a video tutorial on setting it up.
+
+## Tutorial
+[![LONG TUTORIAL](https://img.youtube.com/vi/64_B2qzNH4o/0.jpg)](https://www.youtube.com/watch?v=64_B2qzNH4o)

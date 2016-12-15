@@ -1,5 +1,5 @@
 #!/bin/sh
-# HomePass for OpenWRT. Forked from https://gist.github.com/masterdje/7031189
+# HomePass for OpenWRT. Forked from https://github.com/Nephiel/openwrt-homepass
 # Updated in Dec. 2016 by trusk89 https://github.com/trusk89/openwrt-homepass
 # To be called by cron every few minutes
 
@@ -16,6 +16,13 @@ DATE=$(date)
 
 # The WiFi network number we need to toggle the MAC address of
 # This will use the first wifi in access point mode (ap)
+
+# "OpenWRT can run multiple SSIDs (with their own config) on the same network chipset. 
+# I set up a new SSID for Homepass and noticed that your script scans for the first "mode='ap'", 
+# which was my main AP. I changed the script to use the dedicated ID (2 in my case). 
+# You might add a word of notice about that "Multi-AP"-Feature, for some people that are not that 
+# good with OpenWRT."
+
 WIFI=$(uci show wireless | grep "mode='ap'" | awk 'NR>1{print $1}' RS=[ FS=] | head -n 1)
 
 if [ ! -s /etc/homepass.list ]; then
