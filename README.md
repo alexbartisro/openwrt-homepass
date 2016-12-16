@@ -18,3 +18,6 @@ I will probably do a video tutorial on setting it up.
 
 ## Tutorial
 [![LONG TUTORIAL](https://img.youtube.com/vi/64_B2qzNH4o/0.jpg)](https://www.youtube.com/watch?v=64_B2qzNH4o)
+
+<span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F5UAFVHBPQWXQ" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
+<span class="badge-bitcoin"><a href="http://i.imgur.com/wGR65b3.png" title="Donate once-off to this project using Bitcoin"><img src="https://img.shields.io/badge/bitcoin-donate-yellow.svg" alt="Bitcoin donate button" /></a></span>
